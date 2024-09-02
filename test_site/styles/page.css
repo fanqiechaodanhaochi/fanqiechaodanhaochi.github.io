@@ -1,0 +1,275 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(139, 199, 251);
+    height: 100%;
+    font-family: sans-serif;
+}
+
+header,
+nav,
+main,
+footer {
+    box-sizing: border-box;
+    background-color: rgb(190, 210, 255);
+    border: 1px solid black;
+    display: flex;
+}
+
+header {
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    height: 50px;
+}
+
+.tab {
+    flex: 1;
+    text-decoration: none;
+    border: 1px solid black;
+    background-color: rgb(91, 162, 255);
+    text-align: center;
+    line-height: 3;
+    color: black;
+}
+
+.tab:link,
+.tab:visited,
+.tab:focus {
+    background-color: rgb(91, 162, 255);
+    color: black;
+}
+
+.tab:hover {
+    background-color: aqua;
+}
+
+.tab:active {
+    background: darkred;
+    color: white;
+}
+
+main {
+    min-height: 500px;
+    justify-content: center;
+    position: relative;
+    padding-top: 5%;
+    flex-wrap: wrap;
+}
+
+main > p {
+    font-size: 150%;
+    text-align: left;
+    margin-bottom: 50px;
+    width: 60%;
+    word-wrap: break-word;
+}
+
+#flip1,
+#flip2 {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    border: 3px solid black;
+    border-radius: 2em;
+    background-color: rgb(91, 162, 255);
+    position: absolute;
+    top: 80%;
+    text-decoration: none;
+    text-align: center;
+    line-height: 3;
+    color: black;
+    cursor: pointer;
+}
+
+#start {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 2em;
+    background-color: rgb(91, 162, 255);
+    position: absolute;
+    top: 80%;
+    text-decoration: none;
+    text-align: center;
+    line-height: 3;
+    color: black;
+    cursor: pointer;
+}
+
+#flip1:link,
+#flip1:visited,
+#flip1:focus,
+#flip2:link,
+#flip2:visited,
+#flip2:focus,
+#start:link,
+#start:visited,
+#start:focus {
+    background-color: rgb(91, 162, 255);
+    color: black;
+}
+
+#flip1:hover,
+#flip2:hover,
+#start:hover {
+    background-color: aqua;
+}
+
+#flip1:active,
+#flip2:active,
+#start:active {
+    background: rgb(0, 21, 38);
+    color: white;
+}
+
+#flip1 {
+    right: 60%;
+}
+
+#flip2 {
+    left: 60%;
+}
+
+footer {
+    height: 100px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    flex: 1;
+}
+
+footer > p {
+    flex: 1;
+    text-align: center;
+}
+
+#bpm {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 7px solid rgb(0, 0, 0);
+    border-radius: 1em;
+    width: 30%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 10%;
+    overflow: hidden;
+}
+
+#blinkingBox {
+    flex: 1;
+    width: 50%;
+    height: 30%;
+    background-color: rgb(0, 115, 255);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.piano {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 200px;
+    margin-bottom: 15%;
+}
+
+.piano_key {
+    flex: 1;
+    border: 4px solid black;
+    border-radius: 1rem;
+    background-color: rgb(87, 179, 255);
+    cursor: pointer;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.piano_key:hover {
+    background-color: antiquewhite;
+}
+
+.drum {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 3px solid rgb(0, 0, 0);
+    width: 80%;
+    height: 400px;
+    padding: 0;
+    position: relative;
+    margin-bottom: 15%;
+    background: linear-gradient(rgb(176, 146, 222), rgb(54, 14, 147));
+}
+
+.row {
+    display: flex;
+    flex: 1;
+    flex-direction: rows;
+    box-sizing: border-box;
+    border: 3px solid black;
+    background-color: transparent;
+}
+
+.key {
+    display: none;
+}
+
+.key + label {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid #000;
+    cursor: pointer;
+    color: aliceblue;
+    text-align: center;
+}
+
+.key:checked + label {
+    background-color: rgb(242, 255, 0);
+    color: black;
+    text-align: center;
+}
+
+.key + label:hover {
+    background-color: rgb(165, 174, 0);
+    color: black;
+}
+
+.key + label:active {
+    background-color: rgb(125, 132, 0);
+    color: black;
+}
+
+#play {
+    display: flex;
+    width: 10%;
+    border: 4px solid black;
+    border-radius: 1em;
+    position: absolute;
+    height: 50px;
+    left: 4%;
+    bottom: 7%;
+    background-color: rgb(101, 0, 208);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: large;
+}
+
+#play:hover {
+    background-color: rgb(139, 97, 185);
+}
+
+#play:active {
+    background-color: rgb(150, 115, 188);
+}
+
+#play.playing {
+    background-color: rgb(255, 60, 0);
+}
