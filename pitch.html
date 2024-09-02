@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link href="styles/page.css" rel="stylesheet"/>
+        <title>Lead</title>
+    </head>
+    <body>
+        <header>
+            <h1>Music Composition Web Page for Non-Professionals</h1>
+        </header>
+        <nav>
+            <a href="index.html" class="tab">
+                Home
+            </a>
+            <a href="learning.html" class="tab">
+                Learning
+            </a>
+            <a href="daw.html" class="tab">
+                DAW
+            </a>
+        </nav>
+        <main>
+            <p>The main melody is like the skeleton of a piece of music, supporting the changes throughout. It is made up of different pitches. The difference in pitch is very noticeable in musical instruments. The piano, for example, has a rising pitch from left to right!</p>
+            <div class="piano">
+                <div class="piano_key" data-note="C3">C3</div>
+                <div class="piano_key" data-note="D3">D3</div>
+                <div class="piano_key" data-note="E3">E3</div>
+                <div class="piano_key" data-note="F3">F3</div>
+                <div class="piano_key" data-note="G3">G3</div>
+                <div class="piano_key" data-note="A3">A3</div>
+                <div class="piano_key" data-note="B3">B3</div>
+                <div class="piano_key" data-note="C4">C4</div>
+            </div>
+            <a id="flip1" href="index.html">Previous</a>
+            <a id="flip2" href="bpm.html">Next</a>
+        </main>
+        <footer>
+            <p>2024</p>
+        </footer>
+        <script src="http://unpkg.com/tone"></script>
+        <script src="scripts/lead.js" defer></script>
+    </body>
+</html>
