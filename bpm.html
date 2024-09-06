@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link href="styles/page.css" rel="stylesheet"/>
+        <title>BPM</title>
+    </head>
+    <body>
+        <header>
+            <h1>Music Composition Web Page for Non-Professionals</h1>
+        </header>
+        <nav>
+            <a href="index.html" class="tab">
+                Home
+            </a>
+            <a href="learning.html" class="tab">
+                Learning
+            </a>
+            <a href="daw.html" class="tab">
+                DAW
+            </a>
+        </nav>
+        <main>
+            <p>The bpm controls the energy of the music. Higher bpm tracks have a rocket-like enthusiasm, while lower bpm seems like a quiet courtyard. Try sliding the dots to adjust the speed of the bpm.</p>
+            <div id="bpm">
+                <button onclick="startMetronome()">Start</button>
+                <button onclick="stopMetronome()">Stop</button>
+                <div id="blinkingBox"></div>
+                <div id="bpmDisplay">BPM: 120</div>
+                <input type="range" id="bpmSlider" min="40" max="240" value="120" step="1">
+            </div>
+            <a id="flip1" href="pitch.html">Previous</a>
+            <a id="flip2" href="daw.html">Next</a>
+        </main>
+        <footer>
+            <p>2024</p>
+        </footer>
+        <script src="https://unpkg.com/tone"></script>
+        <script src="scripts/bpm.js" defer></script>
+    </body>
+</html>

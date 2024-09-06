@@ -1,0 +1,238 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(61, 61, 61);
+    height: 100%;
+    font-family: sans-serif;
+}
+
+header,
+nav,
+main,
+footer {
+    box-sizing: border-box;
+    background-color: rgb(206, 209, 255);
+    border: 2px solid black;
+    display: flex;
+}
+
+header {
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    height: 50px;
+}
+
+.tab {
+    flex: 1;
+    text-decoration: none;
+    border: 1px solid black;
+    background-color: rgb(91, 162, 255);
+    text-align: center;
+    line-height: 3;
+}
+
+.tab:link,
+.tab:visited,
+.tab:focus {
+    background-color: rgb(91, 97, 255);
+    color: white;
+}
+
+.tab:hover {
+    background-color: rgb(161, 165, 255);
+    color: black;
+}
+
+.tab:active {
+    background: rgb(0, 20, 75);
+    color: white;
+}
+
+main {
+    min-height: 500px;
+    justify-content: center;
+    position: relative;
+    padding-top: 5%;
+    flex-wrap: wrap;
+}
+
+main > p {
+    font-size: 200%;
+    text-align: left;
+    margin-bottom: 50px;
+    width: 60%;
+    word-wrap: break-word;
+}
+
+footer {
+    height: 5em;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+footer > p {
+    flex: 1;
+    text-align: center;
+    margin-top: 1em;
+    font-size: x-large;
+}
+
+.daw {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    border: 7px solid rgb(0, 0, 0);
+    background-color: rgb(96, 96, 96);
+    border-radius: 1em;
+    width: 80%;
+    height: 40em;
+    position: relative;
+    margin-bottom: 10%;
+}
+
+.instrument {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 10%;
+    height: 80%;
+    border: 3px solid rgb(0, 0, 0);
+    overflow: hidden;
+    position: absolute;
+    top: 1.5em;
+    left: 4%;
+    background-color: rgb(255, 94, 0);
+}
+
+.drum0 {
+    box-sizing: border-box;
+    border: 3px solid black;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-size: x-large;
+    height: 73%;
+}
+
+.drum1,
+.drum2,
+.drum3 {
+    flex: 1;
+    box-sizing: border-box;
+    border: 2px solid black;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-size: x-large;
+    font-size: large;
+}
+
+.daw_content {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 3px solid rgb(0, 0, 0);
+    width: 80%;
+    height: 80%;
+    padding: 0;
+    position: absolute;
+    top: 1.5em;
+    right: 5%;
+    background: linear-gradient(rgb(176, 146, 222), rgb(54, 14, 147));
+}
+
+.row {
+    display: flex;
+    flex: 1;
+    flex-direction: rows;
+    box-sizing: border-box;
+    border: 3px solid black;
+    background-color: transparent;
+}
+
+.key {
+    display: none;
+}
+
+.key + label {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid #000;
+    cursor: pointer;
+    color: aliceblue;
+    text-align: center;
+}
+
+.key:checked + label {
+    background-color: rgb(0, 247, 255);
+    color: black;
+    text-align: center;
+}
+
+.key + label:hover {
+    background-color: rgb(173, 252, 255);
+    color: black;
+}
+
+.key + label:active {
+    background-color: rgb(0, 162, 168);
+    color: black;
+}
+
+#progress_bar {
+    display: flex;
+    width: 80%;
+    height: 30px;
+    margin-top: 10px;
+    border: 4px solid rgb(0, 0, 0);
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+#progress_bar::-webkit-progress-bar {
+    background-color: rgb(188, 200, 210);
+}
+
+#progress_bar::-webkit-progress-value {
+    background-color: #01f029;
+}
+
+#play {
+    display: flex;
+    width: 10%;
+    border: 4px solid black;
+    border-radius: 1em;
+    position: absolute;
+    height: 50px;
+    left: 4%;
+    bottom: 7%;
+    background-color: rgb(101, 0, 208);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: large;
+}
+
+#play:hover {
+    background-color: rgb(139, 97, 185);
+}
+
+#play:active {
+    background-color: rgb(150, 115, 188);
+}
+
+#play.playing {
+    background-color: rgb(255, 64, 0);
+}
